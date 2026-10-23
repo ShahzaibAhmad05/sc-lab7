@@ -3,6 +3,10 @@
  */
 package twitter;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -41,7 +45,18 @@ public class SocialNetwork {
      *         either authors or @-mentions in the list of tweets.
      */
     public static Map<String, Set<String>> guessFollowsGraph(List<Tweet> tweets) {
-        throw new RuntimeException("not implemented");
+        Map<String, Set<String>> followsGraph = new HashMap<>();
+        for (Tweet tweet : tweets) {
+            // usernames are case-insensitive, so store them all in lower case
+            String author = tweet.getAuthor().toLowerCase();
+            Set<String> follows = followsGraph.computeIfAbsent(author, k -> new HashSet<>());
+            for (String mentioned : Extract.getMentionedUsers(Collections.singletonList(tweet))) {
+                if (!mentioned.equals(author)) { // users can't follow themselves
+                    follows.add(mentioned);
+                }
+            }
+        }
+        return followsGraph;
     }
 
     /**
@@ -54,7 +69,19 @@ public class SocialNetwork {
      *         descending order of follower count.
      */
     public static List<String> influencers(Map<String, Set<String>> followsGraph) {
-        throw new RuntimeException("not implemented");
+        // every user in the graph starts with zero followers, including users
+        // who only appear as someone else's followee
+        Map<String, Integer> followerCount = new HashMap<>();
+        for (Map.Entry<String, Set<String>> entry : followsGraph.entrySet()) {
+            followerCount.putIfAbsent(entry.getKey().toLowerCase(), 0);
+            for (String followee : entry.getValue()) {
+                followerCount.merge(followee.toLowerCase(), 1, Integer::sum);
+            }
+        }
+
+        List<String> influencers = new ArrayList<>(followerCount.keySet());
+        influencers.sort((a, b) -> followerCount.get(b) - followerCount.get(a));
+        return influencers;
     }
 
 }
