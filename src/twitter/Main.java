@@ -44,11 +44,18 @@ public class Main {
             throw new Error("Always run main and tests with assertions enabled");
         } catch (AssertionError ae) { }
         
-        final List<Tweet> tweets;
+        List<Tweet> tweets;
         try {
             tweets = TweetReader.readTweetsFromWeb(SAMPLE_SERVER);
-        } catch (IOException ioe) {
-            throw new RuntimeException(ioe);
+        } catch (IOException | RuntimeException e) {
+            // the MIT sample server no longer serves tweets, so fall back to
+            // the sample-tweets.json file copied next to the compiled classes
+            System.err.println("sample server unavailable, using local sample-tweets.json");
+            try {
+                tweets = TweetReader.readTweetsFromWeb(Main.class.getResource("/sample-tweets.json"));
+            } catch (IOException ioe) {
+                throw new RuntimeException(ioe);
+            }
         }
         
         // display some characteristics about the tweets

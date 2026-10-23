@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "text": "Heading to 6.005 lecture with @bbitdiddle and @eva_lu",
+    "created_at": "Fri Oct 23 09:00:00 +0000 2026",
+    "user.screen_name": "alyssa"
+  },
+  {
+    "id": 2,
+    "text": "@alyssa saved you a seat, also @louis_r is late again",
+    "created_at": "Fri Oct 23 09:07:00 +0000 2026",
+    "user.screen_name": "bbitdiddle"
+  },
+  {
+    "id": 3,
+    "text": "Great problem set from @mit_6005 this week #testing",
+    "created_at": "Fri Oct 23 09:14:00 +0000 2026",
+    "user.screen_name": "eva_lu"
+  },
+  {
+    "id": 4,
+    "text": "@mit_6005 can we get an extension? asking for @bbitdiddle",
+    "created_at": "Fri Oct 23 09:21:00 +0000 2026",
+    "user.screen_name": "louis_r"
+  },
+  {
+    "id": 5,
+    "text": "Test first, code second. Thanks @mit_6005 @alyssa",
+    "created_at": "Fri Oct 23 09:28:00 +0000 2026",
+    "user.screen_name": "cy_dfect"
+  },
+  {
+    "id": 6,
+    "text": "@alyssa @eva_lu study group tonight?",
+    "created_at": "Fri Oct 23 09:35:00 +0000 2026",
+    "user.screen_name": "ben_b"
+  },
+  {
+    "id": 7,
+    "text": "Reminder: @MIT_6005 office hours at 4pm, bring @Ben_B",
+    "created_at": "Fri Oct 23 10:42:00 +0000 2026",
+    "user.screen_name": "Alyssa"
+  },
+  {
+    "id": 8,
+    "text": "Just learned about partitions from @mit_6005",
+    "created_at": "Fri Oct 23 10:49:00 +0000 2026",
+    "user.screen_name": "lem_tweakit"
+  },
+  {
+    "id": 9,
+    "text": "@alyssa agreed, the spec is underdetermined on purpose",
+    "created_at": "Fri Oct 23 10:56:00 +0000 2026",
+    "user.screen_name": "eva_lu"
+  },
+  {
+    "id": 10,
+    "text": "following @alyssa and @mit_6005 for the pset tips",
+    "created_at": "Fri Oct 23 10:03:00 +0000 2026",
+    "user.screen_name": "harry_h"
+  },
+  {
+    "id": 11,
+    "text": "no mentions here, just a long day of debugging",
+    "created_at": "Fri Oct 23 10:10:00 +0000 2026",
+    "user.screen_name": "louis_r"
+  },
+  {
+    "id": 12,
+    "text": "@eva_lu nice catch on the case-insensitive usernames",
+    "created_at": "Fri Oct 23 10:17:00 +0000 2026",
+    "user.screen_name": "cy_dfect"
+  },
+  {
+    "id": 13,
+    "text": "@mit_6005 @bbitdiddle red green refactor all day",
+    "created_at": "Fri Oct 23 11:24:00 +0000 2026",
+    "user.screen_name": "pat_p"
+  },
+  {
+    "id": 14,
+    "text": "email me at ben@mit.edu, not a mention of anyone",
+    "created_at": "Fri Oct 23 11:31:00 +0000 2026",
+    "user.screen_name": "ben_b"
+  },
+  {
+    "id": 15,
+    "text": "@cy_dfect @lem_tweakit lunch?",
+    "created_at": "Fri Oct 23 11:38:00 +0000 2026",
+    "user.screen_name": "harry_h"
+  }
+]
